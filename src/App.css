@@ -1,0 +1,519 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+html::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../../WeBeer/public/data/background1.jpg);
+  background-size: contain;
+  background-repeat: repeat;
+  opacity: 0.2; /* Ajusta la opacidad aquí */
+  z-index: -1; /* Asegúrate de que esté detrás del contenido */
+}
+
+.card-beer-details {
+    border: 2px solid rgb(218, 165, 32);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    max-height: 600px;
+    max-width: 600px;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card-beer-details img {
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+    margin-bottom: 1rem;
+  }
+
+  .dashboard {
+    padding: 1rem;
+  }
+
+  .beerDetails {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .card-beer {
+    border: 2px solid rgb(218, 165, 32);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    height: 280px;
+    max-width: 800px;
+    padding: 1rem;
+    margin: 10px;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-beer img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    margin-bottom: 1rem;
+  }
+  
+  .dashboard h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  .dashboard form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .dashboard form input,
+  .dashboard form button {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+  }
+  
+  .dashboard form button {
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .dashboard form button:hover {
+    background-color: #0056b3;
+  }
+
+  .createBeer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 2rem;
+  
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+
+  .createBeer form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .createBeer form div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+  
+  .createBeer form label {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #555;
+  }
+  
+
+  .navbar {
+    background-color: #333;
+    padding: 1rem;
+  }
+  
+  .navbar-list {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar-item {
+    margin: 0 1rem;
+  }
+  
+  .navbar-item a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+  }
+  
+  .navbar-item a:hover {
+    text-decoration: underline;
+  }
+  
+
+  .update-beer {
+    padding: 1rem;
+  }
+  
+  .update-beer h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  .update-beer form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .update-beer form div {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .update-beer form label {
+    font-size: 1rem;
+    font-weight: medium;
+  }
+  
+  .update-beer form input[type="text"],
+  .update-beer form input[type="checkbox"] {
+    margin-top: 0.25rem;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  }
+  
+  .update-beer form button {
+    padding: 0.5rem 1rem;
+    background-color: rgb(218, 165, 32);
+    color: white;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  }
+  
+  .update-beer form button:hover {
+    background-color: rgb(218, 165, 32);
+  }
+  
+  .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+  }
+  
+  .pagination button {
+    padding: 0.5rem 1rem;
+    background-color: rgb(218, 165, 32);
+    color: white;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    margin: 0 0.5rem;
+  }
+  
+  .pagination button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .pagination span {
+    margin: 0 0.5rem;
+  }
+
+  .update-beer p {
+    margin-top: 1rem;
+    font-size: 1rem;
+    color: green;
+  }
+
+  .button {
+    --c: rgb(218, 165, 32);
+    color: var(--c);
+    font-size: 16px;
+    border: 0.3em solid var(--c);
+    border-radius: 0.5em;
+    width: 12em;
+    height: 3em;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: sans-serif;
+    letter-spacing: 0.1em;
+    text-align: center;
+    line-height: 3em;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: 0.5s;
+    margin: 1em;
+  }
+  
+  .button span {
+    position: absolute;
+    width: 25%;
+    height: 100%;
+    background-color: var(--c);
+    transform: translateY(150%);
+    border-radius: 50%;
+    left: calc((var(--n) - 1) * 25%);
+    transition: 0.5s;
+    transition-delay: calc((var(--n) - 1) * 0.1s);
+    z-index: -1;
+  }
+
+  .button:hover {
+    color: black
+  }
+
+  .button:hover span {
+    transform: translateY(0) scale(2);
+  }
+
+  .button span:nth-child(1) {
+    --n: 1;
+  }
+
+  .button span:nth-child(2) {
+    --n: 2;
+  }
+
+  .button span:nth-child(3) {
+    --n: 3;
+  }
+
+  .button span:nth-child(4) {
+    --n: 4;
+  }
+
+
+
+    .periodicTable {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+  .periodicTable > div {
+   
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .aleLager  {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    flex-wrap:wrap;
+    gap: 1rem;
+
+  }
+
+  
+
+  .aleLager > div {
+    flex: 1;
+    min-width: 50px; /* Ajusta este valor según sea necesario */
+    max-width: 100px; 
+    /* Ajusta este valor según sea necesario */
+    text-align: center;
+    justify-content: flex-end;
+    padding: 1rem;
+   
+  }
+
+  .mixed {
+    margin-top: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+
+  .mixed > div {
+    flex: 1;
+    min-width: 50px; /* Ajusta este valor según sea necesario */
+    max-width: 100px; /* Ajusta este valor según sea necesario */
+    text-align: center;
+    
+  
+  }
+  .beer1, .beer2, .beer3, .beer4, .beer5, .beer6, .beer7, .beer8, .beer9a, .beer9b, .beer10, .beer11, .beer12, .beer13 {
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  .beer1 > div, .beer2 > div, .beer3 > div, .beer4 > div, .beer5 > div, .beer6 > div, .beer7 > div, .beer8 > div, .beer9a > div, .beer9b > div, .beer10 > div, .beer11 > div, .beer12 > div, .beer13 > div, .beer14 > div, .beer15 > div, .beer16 > div, .beer17 > div, .beer1819 > div, .beer20 > div {
+    border: 1px solid black; /* Añadir borde sólido */
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    background-color: bisque;
+    width: 90px;
+    height: 95px;
+    border-radius: 0.25rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+ 
+
+  /* Estilo base del sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100vh;
+  background-color: #333;
+  color: white;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+  z-index: 100;
+  padding-top: 20px;
+}
+
+/* Estado oculto */
+.sidebar-closed {
+  transform: translateX(-100%);
+}
+
+/* Estado visible */
+.sidebar-open {
+  transform: translateX(0);
+}
+
+/* Links del sidebar */
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  padding: 10px 20px;
+}
+
+.sidebar ul li a {
+  color: #ccc;
+  text-decoration: none;
+  display: block;
+  transition: color 0.3s;
+}
+
+.sidebar ul li a:hover {
+  color: #fff;
+}
+
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+.history {
+  text-align: center;
+  padding: 2rem;
+  margin: 4rem;
+  color: #333;
+}
+
+.createBeer {
+  padding: 1rem;
+  margin-bottom: 2rem;
+  align-self: center;
+  width: 50%;
+}
+
+.home h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: rgb(218, 165, 32);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.navbar{
+  color: whitesmoke;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 1rem;
+  border-radius: 0 0 1rem 1rem;
+
+}
+
+.navbar h2 {
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin-top: auto;
+  
+}
+
+.navbar img {
+  margin-top: auto;
+  height: 80px;
+  margin-right: 1rem;
+  align-self: center;
+}
+
+h2 {
+  font-size: 4rem;
+  font-weight: bold;
+  color: rgb(218, 165, 32);
+}
+
+.sort-options {
+  margin-bottom: 1rem;
+}
+
+.sort-options label {
+  margin-right: 0.5rem;
+}
+
+.sort-options select {
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  border: 1px solid #ccc;
+}
+
+.history p {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.history h2 {
+  color: rgba(0, 0, 0, 0.9);
+}
+
+.history {
+  background-color:rgb(218, 165, 32);
+  border-radius: 0.5rem;
+}
+
+
+
