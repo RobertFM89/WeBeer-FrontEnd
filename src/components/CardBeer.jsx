@@ -7,10 +7,11 @@ import Button from './Button';
 const CardBeer = ({ beer, onDelete }) => {
   const handleDelete = async () => {
     try {
-      console.log(`Deleting beer with ID: ${beer.id}`); // Verificar el ID
+      console.log(`Deleting beer with ID: ${beer.id}`); 
       await axiosInstance.delete(`/beers/${beer.id}`);
       onDelete(beer.id);
-    } catch (error) {
+    } 
+    catch (error) {
       console.error('Error deleting beer:', error);
     }
   };

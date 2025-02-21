@@ -3,8 +3,9 @@ import '../App.css';
 import axiosInstance from '../axiosConfig';
 import loadingBeer from '../assets/public/biercelona-beer.gif';
 
-const CardBeerDetails = ({ beer, id }) => {
+const CardBeerDetails = ({ id }) => {
 
+  const [beer, setBeer] = useState(null);
 
 
   useEffect(() => {

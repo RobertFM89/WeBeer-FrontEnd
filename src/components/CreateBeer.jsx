@@ -31,7 +31,7 @@ const CreateBeer = () => {
     e.preventDefault();
     try {
       const newBeer = {
-        id: nextId,
+        id: nextId.toString(),
         name,
         img,
         type,

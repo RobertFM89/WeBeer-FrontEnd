@@ -331,7 +331,11 @@ html::before {
 
   }
 
-  
+  .periodicTable div>div:hover {
+    transform: scale(1.2);
+    transition: transform 0.3s ease-in-out;
+  }
+
 
   .aleLager > div {
     flex: 1;
