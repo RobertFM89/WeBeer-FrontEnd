@@ -11,7 +11,7 @@ const PeriodicTable = () => {
 
   return (
     <div className="periodicTable">
-      <h2>Periodic table of Beer Styles</h2>
+      <h2>Periodic Table of Beer Styles</h2>
       <div className="aleLager">
         <div className="beer1" onClick={() => handleNavigate(1)}>
           <div>

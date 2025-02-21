@@ -3,7 +3,7 @@ import '../App.css'
 const History = () => {
   return (
     <div className='history'>
-      <h2>Manifesto Cervecista</h2>
+      <h2>Manifiesto Cervecista</h2>
 <p>1. Hay momentos para todo y luego están esos instantes en los que aparece nuestro lado más Cervecista. Espontáneos, que surgen desde la desconexión, en los que las horas no pasan, con los de toda la vida, donde aprendiste que una buena cerveza sabe mejor en buena compañía.</p>
 
 <p>2. Hablamos de espacios de liberación, que compensan la presión del día a día, pequeños premios que mereces por el trabajo bien hecho… desde casa o en cualquier bar o local especializado, acompañados de una cerveza para cada ocasión.</p>
