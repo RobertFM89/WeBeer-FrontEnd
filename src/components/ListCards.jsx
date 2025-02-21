@@ -4,11 +4,13 @@ import CardBeer from './CardBeer';
 import loadingBeer from '../assets/public/biercelona-beer.gif';
 import '../App.css';
 
+
 const ListCards = ({ currentPage, beersPerPage, setTotalBeers }) => {
+  
   const [beers, setBeers] = useState([]);
   const [loading, setLoading] = useState(true);
   const [sortOption, setSortOption] = useState('beers');
-
+  
   useEffect(() => {
     const fetchBeers = async () => {
       try {
@@ -24,15 +26,21 @@ const ListCards = ({ currentPage, beersPerPage, setTotalBeers }) => {
     fetchBeers();
   }, [setTotalBeers]);
 
-  const handleDelete = async (id) => {
-    try {
-      await axiosInstance.delete(`/beers/${id}`);
-      setBeers(beers.filter(beer => beer.id !== id));
-      setTotalBeers(beers.length - 1);
-    } catch (error) {
-      console.error('Error deleting beer:', error);
-    }
-  };
+  const handleDelete = (id) => {
+   const updatedBeers = beers.filter(beer => beer.id !== id)
+    setBeers(updatedBeers)
+    localStorage.setItem('beers', JSON.stringify(updatedBeers))
+  }
+
+      /*const handleDelete = (id) => {
+        const updatedItems = items.filter(item => item.id !== id)
+        setItems(updatedItems)
+        localStorage.setItem('items', JSON.stringify(updatedItems))
+      }*/
+      
+     
+  
+  
 
   const handleSortChange = (e) => {
     setSortOption(e.target.value);

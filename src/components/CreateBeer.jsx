@@ -31,14 +31,14 @@ const CreateBeer = () => {
     e.preventDefault();
     try {
       const newBeer = {
-        id: nextId.toString(),
+        id: Number(nextId),
         name,
         img,
         type,
         family,
         pais,
-        alcohol,
-        favorite,
+        alcohol: Number(alcohol),
+        favorite: Boolean(favorite),
       };
       await axiosInstance.post('/beers', newBeer);
       setMessage('Beer created successfully!');

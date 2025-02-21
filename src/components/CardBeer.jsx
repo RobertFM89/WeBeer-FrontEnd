@@ -5,11 +5,13 @@ import '../App.css';
 import Button from './Button';
 
 const CardBeer = ({ beer, onDelete }) => {
+
   const handleDelete = async () => {
     try {
       console.log(`Deleting beer with ID: ${beer.id}`); 
       await axiosInstance.delete(`/beers/${beer.id}`);
       onDelete(beer.id);
+      
     } 
     catch (error) {
       console.error('Error deleting beer:', error);
@@ -18,7 +20,7 @@ const CardBeer = ({ beer, onDelete }) => {
 
   return (
     <div className="card-beer">
-      <img src={beer.img} alt={beer.name} />
+      {beer.img && <img src={beer.img} alt={beer.name} />}
       <div >
         <h3 >{beer.name}</h3>
         <p>Familia de cerveza: {beer.family}</p>
