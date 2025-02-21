@@ -1,10 +1,11 @@
 import React from 'react'
 import '../App.css'
+import homeLogo from '../assets/public/Logo2-removebg-preview.png'
 const Home = () => {
   return (
     <div className="home">
     
-      <img src="../assets/public/Logo2-removebg-preview.png" alt="logo" />
+      <img src={homeLogo} alt="logo" />
     </div>
   )
 }
