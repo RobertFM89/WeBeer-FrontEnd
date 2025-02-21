@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import ListCards from '../components/ListCards';
 import loadingBeer from '/public/data/biercelona-beer.gif';
 import { Link } from 'react-router-dom';
+import '../App.css';
 
 
 const Dashboard = () => {

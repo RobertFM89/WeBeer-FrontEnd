@@ -5,6 +5,7 @@ import loadingBeer from '/public/data/biercelona-beer.gif';
 import UpdateBeer from '../components/UpdateBeer';
 import CardBeerDetails from '../components/CardBeerDetails';
 import Button from '../components/Button';
+import '../App.css';
 
 
 
