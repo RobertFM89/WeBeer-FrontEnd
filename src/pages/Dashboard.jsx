@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import ListCards from '../components/ListCards';
-import loadingBeer from '../../public/data/biercelona-beer.gif';
+import loadingBeer from '../assets/public/logo-WeBeer-modified.png';
 import '../App.css';
 
 

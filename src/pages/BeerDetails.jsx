@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import axiosInstance from '../axiosConfig'
 import { useNavigate, useParams } from 'react-router-dom';
-import loadingBeer from '/public/data/biercelona-beer.gif';
+import loadingBeer from '../assets/public/biercelona-beer.gif';
 import UpdateBeer from '../components/UpdateBeer';
 import CardBeerDetails from '../components/CardBeerDetails';
 import Button from '../components/Button';

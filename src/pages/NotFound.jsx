@@ -3,7 +3,7 @@ import '../App.css'
 const NotFound = () => {
   return (
     <div className='not-found'>
-      <img src="https://shop.raynvillesuperstore.co.uk/cdn/shop/files/gmshms_987x.jpg?v=1699455648" alt="Not Found" />
+      <img src="src/assets/public/notFound-removebg-preview.png" alt="Not Found" />
       
     </div>
   )

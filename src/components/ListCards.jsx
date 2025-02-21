@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axiosInstance from '../axiosConfig.js';
 import CardBeer from './CardBeer';
-import loadingBeer from '../../public/data/biercelona-beer.gif';
+import loadingBeer from '../assets/public/biercelona-beer.gif';
 import '../App.css';
 
 const ListCards = ({ currentPage, beersPerPage, setTotalBeers }) => {
@@ -60,7 +60,9 @@ const ListCards = ({ currentPage, beersPerPage, setTotalBeers }) => {
 
 
   if (loading) {
-    return <div>Loading beers...</div>;
+    return <div>
+      <img src={loadingBeer} alt="Loading..." />
+    </div>;
   }
 
   if (!beers.length) {

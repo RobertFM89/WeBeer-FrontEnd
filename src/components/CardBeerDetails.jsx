@@ -1,9 +1,10 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import '../App.css';
 import axiosInstance from '../axiosConfig';
-import loadingBeer from '../../public/data/biercelona-beer.gif';
+import loadingBeer from '../assets/public/biercelona-beer.gif';
 
-const CardBeerDetails = ({ beer, id }) => {
+const CardBeerDetails = ({ id }) => {
+  const [beer, setBeer] = useState(null);
 
 
 
