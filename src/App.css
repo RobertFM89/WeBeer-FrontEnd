@@ -342,6 +342,18 @@ html::before {
    
   }
 
+  .periodicTable p {
+    font-size: 0.8rem;
+    font-weight: bold;
+  }
+
+  .periodicTable h2 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
   .mixed {
     margin-top: auto;
     display: flex;
@@ -367,16 +379,65 @@ html::before {
   .beer1 > div, .beer2 > div, .beer3 > div, .beer4 > div, .beer5 > div, .beer6 > div, .beer7 > div, .beer8 > div, .beer9a > div, .beer9b > div, .beer10 > div, .beer11 > div, .beer12 > div, .beer13 > div, .beer14 > div, .beer15 > div, .beer16 > div, .beer17 > div, .beer1819 > div, .beer20 > div {
     border: 1px solid black; /* Añadir borde sólido */
     padding: 0.5rem;
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
+    margin-top: 0.2rem;
+    margin-bottom: 0.2rem;
     background-color: bisque;
-    width: 90px;
-    height: 95px;
+    width: 80px;
+    height: 70px;
     border-radius: 0.25rem;
     border-radius: 0.5rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
  
+  .beer1 > div, .beer13 > div, .beer14 > div  {
+    background-color: rgb(250,235,30);
+    color: black;
+  }
+
+  .beer2 > div, .beer12 > div  {
+    background-color: rgb(253,208,3);
+    color: black;
+  }
+
+  .beer3 > div, .beer11 > div  {
+    background-color: rgb(249,180,53);
+    color: black;
+  }
+
+  .beer4 > div, .beer10 > div, .beer15 > div  {
+    background-color: rgb(235,139,2);
+    color: black;
+  }
+
+  .beer5 > div  {
+    background-color: rgb(190,95,6);
+    color: black;
+  }
+
+  .beer6 > div  {
+    background-color: rgb(196,85,41);
+    color: black;
+  }
+
+  .beer7 > div  {
+    background-color: rgb(217,63,37);
+    color: black;
+  }
+
+  .beer8 > div, .beer16 > div  {
+    background-color: rgb(109,49,16);
+    color: white;
+  }
+
+  .beer9a > div, .beer9b > div, .beer17 > div, .beer1819 > div  {
+    background-color: rgb(68,43,24);
+    color: white;
+  }
+
+  .beer20 > div  {
+    background-color: rgb(33,32,32);
+    color: white;
+  }
 
   /* Estilo base del sidebar */
 .sidebar {
@@ -516,5 +577,19 @@ h2 {
   border-radius: 0.5rem;
 }
 
+.not-found {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+
+
+}
+
+.not-found img {
+  width: auto;
+  max-height: 500px;
+  margin-bottom: 1rem;
+}
 
 
